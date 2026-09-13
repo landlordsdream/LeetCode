@@ -5,6 +5,7 @@ class ListNode:
         self.next = next
 
 from typing import Optional
+# 迭代法
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None
@@ -16,3 +17,13 @@ class Solution:
             prev = curr
             curr = next_temp
         return prev
+    
+# 递归法
+class Solution:
+    def reverseList(self, head:Optional[ListNode]) -> Optional[ListNode]:
+        if head is None or head.next is None:
+            return head
+        new_head = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return new_head
