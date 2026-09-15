@@ -33,5 +33,32 @@ class Solution:
         return mapping[head]
 
 
+class Solution:
+    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+        if head is None:
+            return None
+        
+        # 复制 + 拆分
+        curr = head
+        while curr:
+            new_Node = Node(curr.val)
+            new_Node.next = curr.next
+            curr.next = new_Nodegit 
+            curr = new_Node.next
+        curr = head
+        while curr:
+            if curr.random:
+                curr.next.random = curr.random.next
+            curr = curr.next.next
+        dummy = Node(-1)
+        new_curr = dummy
+        curr = head
+        while curr:
+            new_curr.next = curr.next  # dummy->A'
+            new_curr = new_curr.next  # A'
+            curr.next = curr.next.next  # 跳过A'
+            curr = curr.next  # A -> B
+        return dummy.next
+
 
 
