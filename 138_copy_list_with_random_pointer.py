@@ -43,7 +43,7 @@ class Solution:
         while curr:
             new_Node = Node(curr.val)
             new_Node.next = curr.next
-            curr.next = new_Nodegit 
+            curr.next = new_Node
             curr = new_Node.next
         curr = head
         while curr:
