@@ -30,6 +30,7 @@
 | 形成环 | create a cycle |
 | 调用栈 | call stack |
 | 往回传 | pass back up |
+| 分治 | divide and conquer |
 
 ### Key Phrases
 
