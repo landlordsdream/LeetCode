@@ -1,4 +1,38 @@
 # LeetCode Solutions
+## Git Commit 规范
+
+本项目采用 [Conventional Commits](https://www.conventionalcommits.org/) 风格，提交信息格式：
+
+- 动词开头，一般现在时
+- 首字母小写，句尾不加句号
+- summary 说清"改了什么"，让人半年后也能看懂
+
+### 常用 type 前缀
+
+| 前缀 | 含义 | 例子 |
+|------|------|------|
+| `feat:` | 新功能 / 新题解 | `feat: solve LeetCode 46 Permutations` |
+| `fix:` | 修 bug | `fix: reset used flag after backtracking` |
+| `docs:` | 文档/注释 | `docs: add backtracking explanation comments` |
+| `refactor:` | 重构不改功能 | `refactor: extract backtracking template` |
+| `test:` | 加测试 | `test: add cases for Permutations` |
+| `chore:` | 杂项 | `chore: update .gitignore` |
+
+### 动词库（挑一个开头）
+
+| 场景 | 动词 |
+|------|------|
+| 做新题 | `solve` / `add` / `implement` |
+| 修 bug | `fix` / `resolve` |
+| 改逻辑 | `update` / `refactor` / `optimize` |
+| 删代码 | `remove` / `delete` |
+| 补注释 | `add` / `update` |
+| 改名 | `rename` |
+
+### 示例
+
+```bash
+git commit -m "feat: solve LeetCode 46 Permutations" -m "DFS backtracking with used array; copy path via path[:]; symmetric undo"
 ## 206. Reverse Linked List
 
 ### Recursive Approach — English Notes
